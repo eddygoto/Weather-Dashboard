@@ -14,22 +14,51 @@
     <header class="jumbotron jumbotron-fluid custom-jumbotron">
       <h1>Weather Dashboard</h1>
     </header>
-    <div class="container">
-      <div class="row col-sm-12 col-md-3 p-2 bg-light">
-        <div>
-          <h3>Search for a City</h3>
-          <div class="input-group mb-3">
-            <input type="text" id="city-input" placeholder="Enter City Name" />
+    <div class="container d-flex">
+      <div class="row p-2">
+        <div class="row col-sm-12 col-md-9 bg-light">
+          <div>
+            <h2>Search for a City</h2>
+            <div class="input-group my-3">
+              <input
+                type="text"
+                id="city-input"
+                placeholder="Enter City Name"
+              />
+            </div>
+            <div class="float-left">
+              <button
+                type="submit"
+                class="btn btn-primary mb-2 align-text-center"
+                id="search-btn"
+              >
+                Search<i class="fas fa-search"></i>
+              </button>
+            </div>
           </div>
-          <div class="col-auto">
-            <button
-              type="submit"
-              class="btn btn-primary mb-2 align-text-center"
-              id="search-btn"
-            >
-              Search<i class="fas fa-search"></i>
-            </button>
+
+          <div class="row col-sm-12 mt-4" id="recent-searches">
+            <!-- append recent cities here -->
           </div>
+        </div>
+
+        <div class="col-sm-12 col-md-9">
+          <div class="row">
+            <div class="col-sm-12 currentWeather">
+              <div class="d-flex cityName">
+                <h2 id="city>"></h2>
+                <h3 id="date"></h3>
+                <img id="weather-icon" />
+              </div>
+              <p class="p-2">
+                Temperature: <span id="temperature"></span> &deg;F
+              </p>
+              <p class="px-2">Humidity: <span id="humidity"></span>%</p>
+              <p class="px-2">Wind Speed: <span id="wind"></span> MPH</p>
+              <p class="px-2">UV Index: <span id="uv-index"></span></p>
+            </div>
+          </div>
+          <div class="row" id="fiveDays"></div>
         </div>
       </div>
     </div>
@@ -37,4 +66,5 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="./assets/js/script.js"></script>
 </html>
